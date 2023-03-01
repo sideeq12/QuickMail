@@ -17,7 +17,7 @@ body{
     font-family: "Poppins", sans-serif ;
     line-height: 1.7;
     position: relative;
-    background-color: #cacaca;
+    background-image: url("bg.jpg");
     height: 100vh;
 }
 
@@ -28,7 +28,7 @@ body{
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     overflow: hidden;
-    background-color: #fff;
+    background-color: #e9e3e3;
     height: 560px;
     width: 300px;
     border-radius: 30px;
@@ -73,7 +73,7 @@ body{
     margin: 25px;
     width: 100%;
     height: 300px;
-    background-image: url("shutter.PNG");
+    background-image: url("abdwaheed.jpg");
     background-size: cover;
     border-radius: 20px;
     overflow: hidden;
