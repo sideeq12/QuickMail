@@ -52,7 +52,7 @@ body{
 }
 .next-screen h1{
     color: #fff;
-    margin-top: 20px;
+    margin-top: 15px;
     line-height: 1;
 }
 .next-screen h1 span{
@@ -62,11 +62,11 @@ body{
 .next-screen .header{
     height: 150px;
     width: 100%;
-    background-image: url("shutter.PNG");
+    background-image: url("Sideeq.JPG");
     border-radius: 20px;
     background-size: cover;
     background-position: center;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 .screen-1 .top{
     position: relative;
@@ -82,8 +82,8 @@ body{
 .next-screen p{
     color: #fff;
     position: relative;
-    margin-top: 20px;
-    font-size: 14px;
+    margin-top: 15px;
+    font-size: 10px;
     line-height: 2;
     padding-bottom: 25px;
 }
@@ -143,4 +143,11 @@ body{
     font-weight: 500;
     z-index: 210;
     color: #cacaca;
+}
+.next-screen a, .next-screen label{
+    font-size: 12px;
+    /* font-weight: bold; */
+    color: white;
+    text-decoration: none;
+     border-bottom:3px solid orangered;
 }
