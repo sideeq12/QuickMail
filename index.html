@@ -5,14 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Binary Beast</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <div class="next-screen">
+       <div class="send">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left" viewBox="0 0 16 16">
-  <path d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>
-</svg>
+            <path d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>
+          </svg>
+       </div>
 
         <h1>
             <span>
@@ -40,9 +43,48 @@
               </svg>
         </div>
         <div class="loading">
-            Fetching...
+            Fetching bio details...
         </div>
     </div>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script>
+    let button = document.querySelector(".button");
+    let reverse = document.querySelector(".reverse");
+    let sending = document.querySelector(".send");
+    sending.addEventListener("click", (e)=>{
+      let tween15 =  gsap.to(".next-screen ", {yPercent : 100, duration: 1, ease: "power1.inOut",});
+      let tween7 =  gsap.from(".loading", {opacity: 1, x: 200, delay:0.5, opacity: 0,  ease: "power1.inOut"}, 1.5);
+      let tween6 =  gsap.to(".loading", {opacity: 1, x:0, ease: "power1.inOut"}, 1.5);
+      let tween5 =  gsap.to(".button", { ease: "power1.inOut", yPercent : 166, scaleY :1, scaleX : 1,borderRadius: "+=50% +=50%", delay : 2},3.5);
+      let tween3 =  gsap.to(".top", {height: 300, ease: "power1.inOut", delay : 2}, 4);
+      let tween2 =  gsap.to(".button", {yPercent:-40, ease: "power1.inOut", delay: 2} , 4);
+      let tween1 =  gsap.to(".button svg", { duration: 1, opacity: 1, ease: "power1.inOut", delay : 1}, 4);
+      let tween =  gsap.to(".button", {rotation: 0, ease: "power1.inOut", delay: 2}, 4);
+    })
+    button.addEventListener("click", (e)=>{
+      let tween =  gsap.to(".button", {rotation: 90, ease: "power1.inOut"});
+      let tween1 =  gsap.to(".button svg", { duration: 1, opacity: 0, ease: "power1.inOut"});
+      let tween2 =  gsap.to(".button", {yPercent:114, ease: "power1.inOut"});
+      let tween3 =  gsap.to(".top", {height: 380, ease: "power1.inOut"}, 0.6);
+      let tween4 =  gsap.to(".top img", {scale: 1.2, yPercent: 40, ease: "power1.inOut"}, 0.8);
+      let tween5 =  gsap.to(".button", { ease: "power1.inOut", yPercent : 166, scaleY : 10, scaleX : 2.6, borderRadius : 0},1.1);    
+      let tween6 =  gsap.from(".loading", {opacity: 0, y: 50, ease: "power1.inOut"}, 1.5);
+      let tween7 =  gsap.to(".loading", {opacity: 0, x: 200, delay:0.5, opacity: 0,  ease: "power1.inOut"}, 1.5);
+      let tween8 =  gsap.from(".next-screen", {yPercent:100, ease: "power1.inOut", duration: 0.5}, 2.2);
+      let tween9 =  gsap.to(".next-screen", {opacity: 1, ease: "power1.inOut", duration: 0.5}, 1.5);
+      let tween10 =  gsap.from(".next-screen svg", {xPercent:-250, ease: "power1.inOut", duration: 0.5}, 2.5);
+      let tween11 =  gsap.from(".next-screen h1", {scale : 0,  opacity : 0, ease: "power1.inOut", duration: 0.3}, 2.8);
+      let tween12 =  gsap.from(".header", {scale : 0,  opacity : 0, ease: "power1.inOut", duration: 0.3}, 2.9);
+      let tween13 =  gsap.from(".next-screen p", {scale : 0,  opacity : 0, ease: "power1.inOut", duration: 0.3}, 3);
+      let tween14 =  gsap.to(".next-screen ", {yPercent : -20, duration: 1, ease: "power1.inOut"}, 3.3);
+      let tween15 =  gsap.to(".next-screen ", {yPercent : 0, duration: 1, ease: "power1.inOut",}, 3.5);
+    })
+    reversed.addEventListener("click", (e)=>{
+        t1.reverse();
+    })
+   
+</script>
 </body>
 </html>

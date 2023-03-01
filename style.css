@@ -12,8 +12,8 @@
 }
 
 body{
-    -webkit-box-sizing: inherit;
-            box-sizing: inherit;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     font-family: "Poppins", sans-serif ;
     line-height: 1.7;
     position: relative;
@@ -44,7 +44,29 @@ body{
     width: 100%;
     padding: 40px 25px 0px 25px;
     z-index: 100;
-    display: none;
+    opacity: 0;
+}
+.next-screen svg{
+    fill: #fff;
+    cursor: pointer;
+}
+.next-screen h1{
+    color: #fff;
+    margin-top: 20px;
+    line-height: 1;
+}
+.next-screen h1 span{
+    font-size: 24px;
+    font-weight: 600;
+}
+.next-screen .header{
+    height: 150px;
+    width: 100%;
+    background-image: url("shutter.PNG");
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    margin-top: 20px;
 }
 .screen-1 .top{
     position: relative;
@@ -55,8 +77,21 @@ body{
     background-size: cover;
     border-radius: 20px;
     overflow: hidden;
+    background-position: center;
 }
-
+.next-screen p{
+    color: #fff;
+    position: relative;
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 2;
+    padding-bottom: 25px;
+}
+.next-screen .send{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
 .screen-1{
     padding: 10px 50px 0px 0px;
 }
@@ -74,6 +109,9 @@ body{
     font-size: 24px;
     font-weight: 200px;
 }
+.screen-1 img{
+    height: 16px;
+}
 .screen-1 .button{
     position: absolute;
     left: 50%;
@@ -85,6 +123,7 @@ body{
     width: 42px;
     border-radius: 50%;
     z-index: 200;
+    cursor: pointer;
 }
 
 .screen-1 .button svg{
@@ -103,4 +142,5 @@ body{
     font-size: 14px;
     font-weight: 500;
     z-index: 210;
+    color: #cacaca;
 }
