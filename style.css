@@ -69,3 +69,38 @@ body{
     line-height: 1;
     z-index: 1;
 }
+
+.screen-1 .top h1 span{
+    font-size: 24px;
+    font-weight: 200px;
+}
+.screen-1 .button{
+    position: absolute;
+    left: 50%;
+    top: 84%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background-color: #101010;
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    z-index: 200;
+}
+
+.screen-1 .button svg{
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    top: 50%;
+    left: 52%;
+    fill: #fff;
+}
+
+.screen-1 .loading{
+    position: absolute;
+    bottom: 16px;
+    left: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 210;
+}
